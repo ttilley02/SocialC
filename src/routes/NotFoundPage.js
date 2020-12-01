@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Section } from "../../components/utils/utils";
+import { Section } from "../components/utils/utils";
 
 export default class NotFoundPage extends Component {
   render() {

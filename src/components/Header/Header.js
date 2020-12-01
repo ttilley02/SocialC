@@ -34,7 +34,7 @@ export default class Header extends Component {
         <nav className="Header">
           <h1>
             <Link to="/">
-              <FontAwesomeIcon className="blue" icon="gift" /> Thingful
+              <FontAwesomeIcon className="blue" icon="gift" /> Social Posts
             </Link>
           </h1>
           {/* <span className='Header__tagline--wide'>Rate all the things.</span> */}
