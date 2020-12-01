@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
-export const nullThing = {
+export const nullPost = {
   author: {},
   tags: []
 };
 
 const ThingContext = React.createContext({
-  thing: nullThing,
+  post: nullPost,
   reviews: [],
   error: null,
   setError: () => {},
   clearError: () => {},
-  setThing: () => {},
+  setPost: () => {},
   clearThing: () => {},
   setReviews: () => {},
   addReview: () => {}
@@ -21,7 +21,7 @@ export default ThingContext;
 
 export class ThingProvider extends Component {
   state = {
-    thing: nullThing,
+    post: nullPost,
     error: null
   };
 
@@ -34,8 +34,8 @@ export class ThingProvider extends Component {
     this.setState({ error: null });
   };
 
-  setThing = (thing) => {
-    this.setState({ thing });
+  setPost = (post) => {
+    this.setState({ post });
   };
 
   setReviews = (reviews) => {
@@ -43,7 +43,7 @@ export class ThingProvider extends Component {
   };
 
   clearThing = () => {
-    this.setThing(nullThing);
+    this.setPost(nullPost);
     this.setReviews([]);
   };
 
@@ -53,12 +53,12 @@ export class ThingProvider extends Component {
 
   render() {
     const value = {
-      thing: this.state.thing,
+      post: this.state.post,
       reviews: this.state.reviews,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setThing: this.setThing,
+      setPost: this.setPost,
       setReviews: this.setReviews,
       clearThing: this.clearThing,
       addReview: this.addReview
