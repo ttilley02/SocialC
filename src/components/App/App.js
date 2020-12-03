@@ -5,6 +5,7 @@ import PrivateRoute from "../utils/PrivateRoute";
 import PublicOnlyRoute from "../utils/PublicOnlyRoute";
 import LoginPage from "../../routes/LoginPage";
 import RegistrationPage from "../../routes/RegistrationPage";
+import PostPage from "../../routes/PostPage";
 import NotFoundPage from "../../routes/NotFoundPage";
 import "./App.css";
 
@@ -30,7 +31,7 @@ class App extends Component {
             {/* <Route exact path={"/"} component={PostListPage} /> */}
             <PublicOnlyRoute path={"/login"} component={LoginPage} />
             <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
-            {/* <PrivateRoute path={"/post/:postId"} component={PostPage} /> */}
+            <PrivateRoute path={"/post/:postId"} component={PostPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>
