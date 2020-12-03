@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import PostListContext from "../../contexts/ListContext";
-import ApiService from "../../services/api-service";
-import { Section } from "../../components/utils/utils";
-import ThingListItem from "../../components/PostListItem/PostListItem";
+import ListContext from "../context/ListContext";
+import ApiService from "../services/api-service";
+import { Section } from "../components/utils/utils";
+import postListItem from "../components/ListItem/ListItem";
 
 export default class PostListPage extends Component {
-  static contextType = PostListContext;
+  static contextType = ListContext;
 
   componentDidMount() {
     this.context.clearError();
-    ApiService.getThings()
+    ApiService.getposts()
       .then(this.context.setPostList)
       .catch(this.context.setError);
   }
 
-  renderThings() {
+  renderposts() {
     const { postList = [] } = this.context;
-    return postList.map((post) => <ThingListItem key={post.id} thing={post} />);
+    return postList.map((post) => <postListItem key={post.id} post={post} />);
   }
 
   render() {

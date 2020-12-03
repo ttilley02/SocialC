@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 import PrivateRoute from "../utils/PrivateRoute";
 import PublicOnlyRoute from "../utils/PublicOnlyRoute";
+import PostListPage from "../../routes/PostListPage";
 import LoginPage from "../../routes/LoginPage";
 import RegistrationPage from "../../routes/RegistrationPage";
 import PostPage from "../../routes/PostPage";
@@ -28,7 +29,7 @@ class App extends Component {
             <p className="red">There was an error! Oh no!</p>
           )}
           <Switch>
-            {/* <Route exact path={"/"} component={PostListPage} /> */}
+            <Route exact path={"/"} component={PostListPage} />
             <PublicOnlyRoute path={"/login"} component={LoginPage} />
             <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
             <PrivateRoute path={"/post/:postId"} component={PostPage} />
