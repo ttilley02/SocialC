@@ -36,11 +36,11 @@ library.add(
 
 ReactDOM.render(
   <BrowserRouter>
-    {/* <PostListProvider>
-      <PostProvider> */}
-    <App />
-    {/* </PostProvider>
-    </PostListProvider> */}
+    <PostListProvider>
+      <PostProvider>
+        <App />
+      </PostProvider>
+    </PostListProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

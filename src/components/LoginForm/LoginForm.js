@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Input } from "../Utils/Utils";
+import { Button, Input } from "../utils/utils";
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 

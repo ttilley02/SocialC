@@ -5,21 +5,21 @@ export const nullPost = {
   tags: []
 };
 
-const ThingContext = React.createContext({
+const postContext = React.createContext({
   post: nullPost,
   reviews: [],
   error: null,
   setError: () => {},
   clearError: () => {},
   setPost: () => {},
-  clearThing: () => {},
+  clearpost: () => {},
   setReviews: () => {},
   addReview: () => {}
 });
 
-export default ThingContext;
+export default postContext;
 
-export class ThingProvider extends Component {
+export class postProvider extends Component {
   state = {
     post: nullPost,
     error: null
@@ -42,7 +42,7 @@ export class ThingProvider extends Component {
     this.setState({ reviews });
   };
 
-  clearThing = () => {
+  clearpost = () => {
     this.setPost(nullPost);
     this.setReviews([]);
   };
@@ -60,13 +60,13 @@ export class ThingProvider extends Component {
       clearError: this.clearError,
       setPost: this.setPost,
       setReviews: this.setReviews,
-      clearThing: this.clearThing,
+      clearpost: this.clearpost,
       addReview: this.addReview
     };
     return (
-      <ThingContext.Provider value={value}>
+      <postContext.Provider value={value}>
         {this.props.children}
-      </ThingContext.Provider>
+      </postContext.Provider>
     );
   }
 }
