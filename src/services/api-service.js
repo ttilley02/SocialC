@@ -1,50 +1,50 @@
 import config from "../config";
 import TokenService from "./token-service";
 
-const ThingApiService = {
-  getThings() {
-    return fetch(`${config.API_ENDPOINT}/things`, {
-      headers: {
-        Authorization: `bearer ${TokenService.getAuthToken()}`
-      }
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-    );
-  },
-  getThing(thingId) {
-    return fetch(`${config.API_ENDPOINT}/things/${thingId}`, {
-      headers: {
-        Authorization: `bearer ${TokenService.getAuthToken()}`
-      }
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-    );
-  },
-  getThingReviews(thingId) {
-    return fetch(`${config.API_ENDPOINT}/things/${thingId}/reviews`, {
-      headers: {
-        Authorization: `bearer ${TokenService.getAuthToken()}`
-      }
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-    );
-  },
-  postReview(thingId, text, rating) {
-    return fetch(`${config.API_ENDPOINT}/reviews`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        Authorization: `bearer ${TokenService.getAuthToken()}`
-      },
-      body: JSON.stringify({
-        thing_id: thingId,
-        rating,
-        text
-      })
-    }).then((res) =>
-      !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-    );
-  }
+const postApiService = {
+   getPosts() {
+      return fetch(`${config.API_ENDPOINT}/posts`, {
+         headers: {
+            Authorization: `bearer ${TokenService.getAuthToken()}`,
+         },
+      }).then((res) =>
+         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+      );
+   },
+   getPost(postId) {
+      return fetch(`${config.API_ENDPOINT}/posts/${postId}`, {
+         headers: {
+            Authorization: `bearer ${TokenService.getAuthToken()}`,
+         },
+      }).then((res) =>
+         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+      );
+   },
+   getPostReviews(postId) {
+      return fetch(`${config.API_ENDPOINT}/posts/${postId}/reviews`, {
+         headers: {
+            Authorization: `bearer ${TokenService.getAuthToken()}`,
+         },
+      }).then((res) =>
+         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+      );
+   },
+   postReview(postId, text, rating) {
+      return fetch(`${config.API_ENDPOINT}/reviews`, {
+         method: "POST",
+         headers: {
+            "content-type": "application/json",
+            Authorization: `bearer ${TokenService.getAuthToken()}`,
+         },
+         body: JSON.stringify({
+            post_id: postId,
+            rating,
+            text,
+         }),
+      }).then((res) =>
+         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+      );
+   },
 };
 
-export default ThingApiService;
+export default postApiService;
