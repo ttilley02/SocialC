@@ -8,5 +8,5 @@ Scalable React template for a social media site.
 ##### Comments section for each post
 ##### 1-5 ratings scale
 
-Technologies used
-React.js, Vanilla CSS5, Jwt-decode
+## Technologies used
+React.js, CSS, Jwt-decode(auth)
