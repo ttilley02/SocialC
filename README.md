@@ -1,6 +1,6 @@
 # Social Posts Client
 
-Scalable React template for image social media site.
+Scalable React template for a social media site.
 
 ## Features:
 ##### Auth for registration
