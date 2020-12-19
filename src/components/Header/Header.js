@@ -43,7 +43,7 @@ export default class Header extends Component {
           <Link to='/'>
             <FontAwesomeIcon className='blue' icon='gift' />
             {' '}
-            Thingful
+            Social!
           </Link>
         </h1>
         {/* <span className='Header__tagline--wide'>Rate all the things.</span> */}
