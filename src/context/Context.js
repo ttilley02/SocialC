@@ -12,7 +12,7 @@ const postContext = React.createContext({
    setError: () => {},
    clearError: () => {},
    setPost: () => {},
-   clearpost: () => {},
+   clearPost: () => {},
    setReviews: () => {},
    addReview: () => {},
 });
@@ -42,7 +42,7 @@ export class PostProvider extends Component {
       this.setState({ reviews });
    };
 
-   clearpost = () => {
+   clearPost = () => {
       this.setPost(nullPost);
       this.setReviews([]);
    };
@@ -60,7 +60,7 @@ export class PostProvider extends Component {
          clearError: this.clearError,
          setPost: this.setPost,
          setReviews: this.setReviews,
-         clearpost: this.clearpost,
+         clearPost: this.clearPost,
          addReview: this.addReview,
       };
       return (

@@ -11,7 +11,7 @@ const postApiService = {
          !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
       );
    },
-   getPost(postId) {
+   getPostById(postId) {
       return fetch(`${config.API_ENDPOINT}/posts/${postId}`, {
          headers: {
             Authorization: `bearer ${TokenService.getAuthToken()}`,

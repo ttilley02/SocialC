@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { PostListProvider } from "./context/ListContext";
 import { PostProvider } from "./context/Context";
 import App from "./components/App/App";
+import './index.css'
 
 import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 

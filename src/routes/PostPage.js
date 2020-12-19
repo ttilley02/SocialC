@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import postContext from "../context/Context";
 import postApiService from "../services/api-service";
 import { Hyph, Section } from "../components/utils/utils";
-import { postStarRating } from "../components/StarRating/PostStarRating";
+import { PostStarRating } from "../components/StarRating/PostStarRating";
 import ReviewForm from "../components/ReviewForm/ReviewForm";
 import "./PostPage.css";
 
@@ -21,21 +21,19 @@ export default class postPage extends Component {
       console.log(this.props.match.params);
       console.log(postId);
       this.context.clearError();
-      postApiService
-         .getPosts(postId)
-         .then(this.context.setpost)
+      postApiService.getPostById(postId)
+         .then(this.context.setPost)
          .catch(this.context.setError);
-      postApiService
-         .getPostsReviews(postId)
+      postApiService.getPostsReviews(postId)
          .then(this.context.setReviews)
          .catch(this.context.setError);
    }
 
    componentWillUnmount() {
-      this.context.clearpost();
+      this.context.clearPost();
    }
 
-   renderpost() {
+   renderPost() {
       const { post, reviews } = this.context;
       return (
          <>
@@ -44,15 +42,17 @@ export default class postPage extends Component {
                style={{ backgroundImage: `url(${post.image})` }}
             />
             <h2>{post.title}</h2>
-            <postContent post={post} />
-            <postReviews reviews={reviews} />
+            <PostContent post={post} />
+            <PostReviews reviews={reviews} />
             <ReviewForm />
          </>
       );
    }
 
    render() {
+      
       const { error, post } = this.context;
+      console.log("Asfsdafadsfasdfdsfdafadsf",this.context.post.id)
       let content;
       if (error) {
          content =
@@ -64,17 +64,17 @@ export default class postPage extends Component {
       } else if (!post.id) {
          content = <div className="loading" />;
       } else {
-         content = this.renderpost();
+         content = this.renderPost();
       }
       return <Section className="postPage">{content}</Section>;
    }
 }
 
-function postContent({ post }) {
+function PostContent({ post }) {
    return <p className="postPage__content">{post.content}</p>;
 }
 
-function postReviews({ reviews = [] }) {
+function PostReviews({ reviews = [] }) {
    return (
       <ul className="postPage__review-list">
          {reviews.map((review) => (
@@ -88,7 +88,7 @@ function postReviews({ reviews = [] }) {
                   {review.text}
                </p>
                <p className="postPage__review-user">
-                  <postStarRating rating={review.rating} />
+                  <PostStarRating rating={review.rating} />
                   <Hyph />
                   {review.user.full_name}
                </p>
