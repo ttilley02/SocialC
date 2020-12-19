@@ -16,10 +16,7 @@ export default class postPage extends Component {
 
    componentDidMount() {
       const { postId } = this.props.match.params;
-      console.log(this.props);
-      console.log(this.props.match);
-      console.log(this.props.match.params);
-      console.log(postId);
+
       this.context.clearError();
       postApiService.getPostById(postId)
          .then(this.context.setPost)
@@ -52,7 +49,6 @@ export default class postPage extends Component {
    render() {
       
       const { error, post } = this.context;
-      console.log("Asfsdafadsfasdfdsfdafadsf",this.context.post.id)
       let content;
       if (error) {
          content =

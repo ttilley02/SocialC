@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+//populates the rating selector
 export function PostStarRating({ rating }) {
    const stars = [
       { filled: false },
