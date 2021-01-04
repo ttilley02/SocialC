@@ -1,7 +1,8 @@
 # Social Posts Client
 
 Scalable React template for a social media site.
-BackendRepo:https://codesandbox.io/s/github/ttilley02/SocialBack
+
+#### BackendRepo: https://codesandbox.io/s/github/ttilley02/SocialBack
 
 ## Features:
 ##### Auth for registration
