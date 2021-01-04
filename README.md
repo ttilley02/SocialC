@@ -6,8 +6,8 @@ Scalable React template for a social media site.
 #### BackendRepo: https://codesandbox.io/s/github/ttilley02/SocialBack
 
 ## Test User:
-##### user:dunder
-##### password:password
+##### User: dunder
+##### Password: password
 
 ## Features:
 ##### Auth for registration
