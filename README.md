@@ -11,5 +11,5 @@ Scalable React template for a social media site.
 ## Technologies used
 React.js, CSS, Jwt-decode(auth)
 
-![](public/img/1111.PNG)
-![](public/img/2222.PNG)
+![](src/img/1111.PNG)
+![](src/img/2222.PNG)
