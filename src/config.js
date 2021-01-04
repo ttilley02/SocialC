@@ -1,4 +1,4 @@
 export default {
-   API_ENDPOINT: "http://localhost:8080/api",
+   API_ENDPOINT: "https://ancient-badlands-32750.herokuapp.com/api",
    TOKEN_KEY: "Post-client-auth-token",
 };

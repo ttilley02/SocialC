@@ -17,6 +17,16 @@ export default class Header extends Component {
           to='/'>
           Logout
         </Link>
+        <Link
+          onClick={this.handleLogoutClick}
+          to='/'>
+          Saved
+        </Link>
+        <Link
+          onClick={this.handleLogoutClick}
+          to='/'>
+          Replied
+        </Link>
       </div>
     )
   }
@@ -35,6 +45,8 @@ export default class Header extends Component {
       </div>
     )
   }
+
+  
 
   render() {
     return <>
