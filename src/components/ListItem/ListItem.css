@@ -1,7 +1,7 @@
 .postListItem {
   background: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: 0;
   font-size: smaller;
   text-decoration: none;
@@ -21,9 +21,9 @@
 }
 
 .postListItem__image {
-  height: 200px;
-  width: 225px;
-  border-radius: 10px 0 0 10px;
+  height: 250px;
+  width: 275px;
+  border-radius: 10px 10px 0 0;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -34,7 +34,7 @@
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  width: 500px;
+  width: 275px;
 }
 
 .postListItem__details h2 {
