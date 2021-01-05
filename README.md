@@ -1,17 +1,7 @@
 # Social Posts Client
-
 Scalable React template for a social media site.
 
-
-
-
-
-
 #### BackendRepo: https://codesandbox.io/s/github/ttilley02/SocialBack
-
-## Test User:
-##### User: dunder
-##### Password: password
 
 ## Features:
 ##### Auth for registration
@@ -22,6 +12,10 @@ Scalable React template for a social media site.
 ## Screenshots
 ![](src/img/1111.PNG)
 ![](src/img/2222.PNG)
+
+## Test User:
+##### User: dunder
+##### Password: password
 
 
 ## Technologies used
