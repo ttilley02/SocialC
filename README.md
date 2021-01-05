@@ -4,9 +4,7 @@ Scalable React template for a social media site.
 
 
 
-## Screenshots
-![](src/img/1111.PNG)
-![](src/img/2222.PNG)
+
 
 
 #### BackendRepo: https://codesandbox.io/s/github/ttilley02/SocialBack
@@ -20,6 +18,11 @@ Scalable React template for a social media site.
 ##### Landing Page showing user posts
 ##### Comments section for each post
 ##### 1-5 ratings scale
+
+## Screenshots
+![](src/img/1111.PNG)
+![](src/img/2222.PNG)
+
 
 ## Technologies used
 React.js, CSS, Jwt-decode(auth)
